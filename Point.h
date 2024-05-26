@@ -15,6 +15,10 @@ struct Point{
           return x < other.x;
       return y < other.y;
   }
+
+  Point operator+(const Point& other) const {
+    return {x + other.x, y + other.y};
+  } 
 };
 
 #endif
