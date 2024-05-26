@@ -29,4 +29,10 @@ struct Point{
   }
 };
 
+struct PointHash {
+    size_t operator()(const Point& p) const {
+        return hash<int>()(p.x) ^ (hash<int>()(p.y) << 1);
+    }
+};
+
 #endif
