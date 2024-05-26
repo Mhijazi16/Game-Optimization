@@ -5,3 +5,10 @@
 
 using namespace std;
 
+static string PLAYER = "🐊";
+static vector<string> WALL = {"⛺","🪵","🗿","🎪"};
+static vector<string> BOX = {"🧺","🫙","🛒"};
+static vector<string> POINT = {"🍗","🍖","🥩"};
+static vector<string> moon = {"🌘","🌗","🌖","🌕","🌔","🌓","🌒","🌑"};
+static string BONE = "🦴";
+static int m = 0; 
