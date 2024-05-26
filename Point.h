@@ -23,6 +23,10 @@ struct Point{
   Point operator+(const Point& other) const {
     return {x + other.x, y + other.y};
   } 
+
+  double distance(Point& other){
+    return sqrt(pow(x - other.x, 2) + pow(y - other.y, 2));
+  }
 };
 
 #endif
