@@ -35,4 +35,6 @@ struct PointHash {
     }
 };
 
+ostream& operator<<(ostream& os, const Point& p);
+
 #endif
