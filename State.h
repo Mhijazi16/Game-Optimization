@@ -25,4 +25,9 @@ struct State{
              Rows == other.Rows &&
              Cols == other.Cols;
   }
+
+  string& map_at(Point point){
+    return Map[point.x][point.y];
+  }
+
 };
