@@ -30,4 +30,13 @@ struct State{
     return Map[point.x][point.y];
   }
 
+  bool isWall(Point location){
+    auto cell = map_at(location);
+    for (auto& wall : WALL) {
+      if(wall == cell)
+        return true; 
+    }
+    return false;
+  }
+
 };
