@@ -66,4 +66,11 @@ struct State{
     return false;
   }
 
+  Point& box_at(Point location){
+    for (auto& box : Boxes) 
+      if (box == location)
+        return box;
+    return Boxes[0]; 
+  }
+  
 };
