@@ -79,5 +79,9 @@ struct State{
         return box;
     return Boxes[0]; 
   }
-  
+
+  void print_player_info(string icon){
+    cout << icon <<  " Player : " << Player << '\n';
+  }
+
 };
