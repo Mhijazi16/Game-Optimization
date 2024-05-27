@@ -59,4 +59,11 @@ struct State{
     return map_at(location) == "  ";
   }
 
+  bool isWallorBox(Point location){
+    auto& str = map_at(location);
+    if (isWall(location) || isBox(location))
+      return true;
+    return false;
+  }
+
 };
