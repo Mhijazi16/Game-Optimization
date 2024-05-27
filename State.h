@@ -84,4 +84,11 @@ struct State{
     cout << icon <<  " Player : " << Player << '\n';
   }
 
+  void print_boxes_info(string icon){
+    cout << icon << " Boxes : " ; 
+    for(auto& box : Boxes)
+      cout << box << ",";
+    cout << '\n';
+  }
+  
 };
