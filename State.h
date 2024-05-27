@@ -105,4 +105,23 @@ struct State{
     print_boxes_info(icon);
   }
 
+  void refresh(){
+    if (!Boxes.empty()) 
+      Boxes.clear();
+
+    Rows = Map.size();
+    Cols = Map[0].size();
+
+    for (int i = 0; i < Rows; i++)
+      for (int j = 0; j < Cols; j++)
+      {
+        string current = map_at({i,j});
+        if(current == PLAYER)
+          Player = {i,j};
+        else if(isBox({i,j}))
+          Boxes.push_back({i,j});
+        else if(isPoint({i,j}))
+          Meat.push_back({i,j});
+      }
+  }
 };
