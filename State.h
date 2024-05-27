@@ -125,3 +125,27 @@ struct State{
       }
   }
 };
+
+struct StateHash {
+    size_t operator()(const State& s) const {
+        size_t h1 = 0;
+        for (const auto& row : s.Map) {
+            for (const auto& elem : row) {
+                h1 ^= hash<string>()(elem);
+            }
+        }
+        size_t h3 = PointHash()(s.Player);
+        size_t h4 = 0;
+        for (const auto& point : s.Meat) {
+            h4 ^= PointHash()(point);
+        }
+        size_t h5 = 0;
+        for (const auto& point : s.Boxes) {
+            h5 ^= PointHash()(point);
+        }
+        size_t h6 = hash<string>()(s.Action);
+        size_t h7 = hash<int>()(s.Rows) ^ (hash<int>()(s.Cols) << 1);
+
+        return h1  ^ h3 ^ h4 ^ h5 ^ h6 ^ h7;
+    }
+};
