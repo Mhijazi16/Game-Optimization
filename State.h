@@ -39,4 +39,12 @@ struct State{
     return false;
   }
 
+  bool isBox(Point location){
+    for (auto& box : BOX) {
+      if(box == map_at(location))
+        return true; 
+    }
+    return false;
+  }
+
 };
