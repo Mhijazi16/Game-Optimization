@@ -66,6 +66,13 @@ struct State{
     return false;
   }
 
+  bool player_on_point(){
+    for (auto& point : Meat) 
+      if (point == Player)  
+        return true;
+    return false;
+  }
+
   Point& box_at(Point location){
     for (auto& box : Boxes) 
       if (box == location)
