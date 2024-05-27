@@ -91,4 +91,18 @@ struct State{
     cout << '\n';
   }
   
+  void print_map(){
+    cout << '\n';
+    for (auto row : Map) 
+    {
+      for(auto cell : row)
+        cout << cell; 
+      cout << '\n';
+    }
+
+    auto icon = moon[m++%moon.size()]; 
+    print_player_info(icon);
+    print_boxes_info(icon);
+  }
+
 };
