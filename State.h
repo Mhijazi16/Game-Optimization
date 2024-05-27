@@ -13,4 +13,16 @@ struct State{
   string Action = "NULL";
   int Rows = 0; 
   int Cols = 0;
+
+  State() = default;
+
+  bool operator==(const State &other) const {
+      return Map == other.Map &&
+             Player == other.Player &&
+             Meat == other.Meat &&
+             Boxes == other.Boxes &&
+             Action == other.Action &&
+             Rows == other.Rows &&
+             Cols == other.Cols;
+  }
 };
