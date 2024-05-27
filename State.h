@@ -55,4 +55,8 @@ struct State{
     return false;
   }
 
+  bool isSpace(Point& location){
+    return map_at(location) == "  ";
+  }
+
 };
