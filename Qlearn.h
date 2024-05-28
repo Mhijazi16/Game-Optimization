@@ -89,3 +89,11 @@ double close_to_box(State& state){
   return sum;
 }
 
+double close_to_bone(State& state){
+  double sum = 0;
+  for (auto& bone : state.Bones) {
+    sum += bone.distance(state.Player) * 5000;
+  }
+  return sum;
+}
+
