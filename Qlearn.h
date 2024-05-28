@@ -27,3 +27,8 @@ void init()
   GAME.map_at({x,y}) = PLAYER;
   GAME.refresh();
 }
+
+State apply_move(State state, int action){
+  return state;
+}
+
