@@ -97,3 +97,25 @@ double close_to_bone(State& state){
   return sum;
 }
 
+double Reward(State& state){
+
+  if (isDeadlock(state))
+    return 0;
+
+  double sum = 0; 
+
+  for (auto& box : state.Boxes){
+    if (onGoal(state, box)) 
+        sum += 900;
+  }
+
+  // sum += close_to_box(state);
+
+  if (isGoal(state))
+    sum += 1000000 * (lvl +1);
+  // else 
+  //   sum += close_to_bone(state);
+
+  return sum;
+}
+
