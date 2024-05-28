@@ -29,6 +29,11 @@ void init()
 }
 
 State apply_move(State state, int action){
-  return state;
-}
 
+  auto move = Actions[moves[action]]; 
+  auto& player = state.Player;
+  auto Target = player + move;
+  auto Future = Target + move; 
+
+  return state; 
+}
