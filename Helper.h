@@ -28,6 +28,17 @@ bool isDeadlock(State state){
     if (seen.find(box) != seen.end())   
       return true; 
     seen.insert(box);
+
+    if (onGoal(state, box))
+      continue; 
+
+    bool upright = state.isWall(box + Actions["up"]) && state.isWall(box + Actions["right"]); 
+    bool upleft = state.isWall(box + Actions["up"]) && state.isWall(box + Actions["left"]); 
+    bool downleft = state.isWall(box + Actions["down"]) && state.isWall(box + Actions["left"]); 
+    bool downright = state.isWall(box + Actions["down"]) && state.isWall(box + Actions["right"]); 
+
+    if (upright || upleft || downleft || downright)
+      return true;
   }
 
 return false;
