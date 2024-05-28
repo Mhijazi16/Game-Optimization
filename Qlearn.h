@@ -142,3 +142,30 @@ double FindMax(State next){
   return maxi;
 }
 
+void Qlearn(State state){
+
+  while(!isGoal(state)){
+    if (isDeadlock(state)) 
+      return;
+
+    if (q_table.find(state) == q_table.end())
+      q_table[state] = {0,0,0,0};
+
+    State  next_state;
+    int index;     
+    do
+    {
+      index = rand()%4;
+      next_state = apply_move(state, index);
+    }while(next_state == state);
+      
+
+    double reward = Reward(next_state) + 0.8432 * FindMax(next_state);
+    q_table[state][index] = reward;
+
+    state.print_map();
+    state = next_state;
+  };
+  state.print_map();
+}
+
