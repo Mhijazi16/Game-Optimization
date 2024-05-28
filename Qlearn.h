@@ -56,4 +56,15 @@ State apply_move(State state, int action){
     state.map_at(Target) = "  ";
     state.box_at(Target) = Future;
   }
+
+  if (state.isSpace(Target)) {
+    if(state.player_on_point())
+      state.map_at(player) = POINT[lvl];
+    else 
+      state.map_at(player) = "  ";
+    state.map_at(Target) = PLAYER;
+    player = Target;
+  }
+
+  return state;
 }
