@@ -79,3 +79,13 @@ vector<State> generate_children(State state){
   }
   return children;
 }
+
+double close_to_box(State& state){
+  double sum = 0; 
+  for (auto& box : state.Boxes){
+    sum += 10000/box.distance(state.Player);
+  }
+
+  return sum;
+}
+
