@@ -8,3 +8,10 @@ bool isGoal(State state){
   return true;
 }
 
+bool onGoal(State state, Point location){
+  for (auto& point : state.Meat)
+    if (point == location)
+      return true;
+  return false;
+}
+
