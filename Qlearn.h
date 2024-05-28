@@ -68,3 +68,14 @@ State apply_move(State state, int action){
 
   return state;
 }
+
+vector<State> generate_children(State state){
+  vector<State> children;
+  for (int i = 0; i < 4; i++) {
+    auto child = apply_move(state, i);
+    if(child == state )
+      continue;
+    children.push_back(child);
+  }
+  return children;
+}
