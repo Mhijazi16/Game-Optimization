@@ -35,5 +35,8 @@ State apply_move(State state, int action){
   auto Target = player + move;
   auto Future = Target + move; 
 
-  return state; 
+  if(notAllowed(state, Target, Future))
+    return state;
+  state.Action = action;
+
 }
