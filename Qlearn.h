@@ -45,4 +45,15 @@ State apply_move(State state, int action){
     player = Target;
     return state;
   }
+
+  if (state.isBox(Target)) {
+    if (state.isPoint(Future)){
+      state.map_at(Future) = BONE; 
+      state.Bones.push_back(Future);
+    }
+    else 
+      state.map_at(Future) = BOX[lvl]; 
+    state.map_at(Target) = "  ";
+    state.box_at(Target) = Future;
+  }
 }
