@@ -15,3 +15,8 @@ bool onGoal(State state, Point location){
   return false;
 }
 
+bool notAllowed(State state, Point& Target, Point& Future){
+  return state.isWall(Target) ||  
+         state.isBox(Target) && state.isWallorBox(Future);
+}
+
