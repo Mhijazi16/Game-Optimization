@@ -39,4 +39,10 @@ State apply_move(State state, int action){
     return state;
   state.Action = action;
 
+  if (state.isPoint(Target)) {
+    state.map_at(Target) = PLAYER;
+    state.map_at(player) = "  ";
+    player = Target;
+    return state;
+  }
 }
