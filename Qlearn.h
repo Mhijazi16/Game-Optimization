@@ -131,3 +131,14 @@ void printQ(){
   cin.ignore();
 }
 
+double FindMax(State next){
+
+  double maxi = 0;
+  if (q_table.find(next) != q_table.end()) {
+    for (int i = 0; i < 4; i++) {
+      maxi = max(maxi, q_table[next][i]);
+    }
+  }
+  return maxi;
+}
+
