@@ -119,3 +119,15 @@ double Reward(State& state){
   return sum;
 }
 
+void printQ(){
+  int i = 0;
+  for (auto& s : q_table) {
+    cout << "S" << i++ << ": ";
+    for (auto& val : s.second) {
+      cout << val << " | ";
+    }
+    cout << endl << "-----------------------------------------" << endl;
+  }
+  cin.ignore();
+}
+
