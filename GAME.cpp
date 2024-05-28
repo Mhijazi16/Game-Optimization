@@ -9,3 +9,13 @@ ostream& operator<<(ostream& os, const Point& p) {
   return os;
 }
 
+int main(){
+
+  init();
+  Train();
+  printQ();
+  solve_game(GAME);
+
+  return 0;
+}
+
