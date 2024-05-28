@@ -20,7 +20,6 @@ This repository contains code to solve the Sokoban game using the Q-learning alg
 ### Training 
 ![train3](https://github.com/Mhijazi16/AI-GameOptimization/assets/45119497/16a7d4ef-e2b5-40d6-9084-42cedc343de0)
 
-![train2](https://github.com/Mhijazi16/AI-GameOptimization/assets/45119497/c0c8358c-9568-410a-8d47-764530a004ef)
 
 ### Solving
 
