@@ -39,6 +39,12 @@ bool isDeadlock(State state){
 
     if (upright || upleft || downleft || downright)
       return true;
+
+    for (auto& action : Actions) {
+      auto p = action.second+box;
+      if (state.isBox(p))
+        return true; 
+    }
   }
 
 return false;
