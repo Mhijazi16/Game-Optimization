@@ -203,3 +203,18 @@ void solve_game(State s){
   solve_game(apply_move(s, index));
 }
 
+void Train(){
+  int x; 
+  cout << "Enter the number of Episodes to Train : "; 
+  cin >> x; 
+
+  auto states = generate_children(GAME);
+  states.push_back(GAME);
+
+  while (x-- > 0) 
+    for (int i = 0; i < states.size(); i++)
+      Qlearn(states[i]);
+  cout << "Training Finished Now Keep clicking Enter to see Solving States" << endl;
+  cin.ignore();
+}
+
