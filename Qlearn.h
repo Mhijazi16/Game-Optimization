@@ -17,4 +17,13 @@ void init()
   select_level();
   GAME.Map = levels[lvl];
   GAME.print_map();
+
+  int x,y;
+  do {
+    cout << "Enter Player Position : " ; 
+    cin >> x >> y;
+  }while (GAME.map_at({x,y}) != "  ");
+
+  GAME.map_at({x,y}) = PLAYER;
+  GAME.refresh();
 }
