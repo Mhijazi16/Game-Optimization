@@ -11,3 +11,10 @@ void select_level()
   cin >> lvl; 
   lvl--; 
 }
+
+void init()
+{
+  select_level();
+  GAME.Map = levels[lvl];
+  GAME.print_map();
+}
