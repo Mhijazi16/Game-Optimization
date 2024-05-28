@@ -1,9 +1,9 @@
-🕹️ AI-GameOptimization
-Welcome to the AI-GameOptimization repository! This project explores the use of various optimization algorithms to solve complex games. Currently, it focuses on solving the Sokoban game using Q-learning, with plans to extend to genetic algorithms and other optimization techniques in the future.
+ AI-GameOptimization
+
 
 ## 📋 Table of Contents
 
-- [🔍 Introduction](#introduction)
+- [🕹️ Introduction](#introduction)
 - [🫐 Showcase](#showcase)
 - [✨ Features](#features)
 - [💻 Installation](#installation)
@@ -13,8 +13,8 @@ Welcome to the AI-GameOptimization repository! This project explores the use of 
 - [🤝 Contributing](#contributing)
 - [📜 License](#license)
 
-## 🔍 Introduction
-This repository contains code to solve the Sokoban game using the Q-learning algorithm. Sokoban is a classic puzzle game where the player pushes boxes to designated storage locations. The goal is to develop AI agents that can efficiently solve these puzzles using reinforcement learning and other optimization techniques.
+## 🕹️ Introduction
+Welcome to the AI-GameOptimization repository! This project explores the use of optimization algorithms to solve complex games. Currently, it focuses on solving the Sokoban game using Q-learning, with plans to extend to genetic algorithms and other optimization techniques in the future.
 
 ## 🫐 Showcase
 ### Training 
