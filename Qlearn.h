@@ -169,3 +169,37 @@ void Qlearn(State state){
   state.print_map();
 }
 
+void accumulate_rewards(string& reward, string move, int val ){
+  reward += "| ";
+  reward += move; 
+  reward += " : ";
+  reward += to_string(val);
+}
+
+void solve_game(State s){
+
+  if (isGoal(s)) 
+  {
+    s.print_map();
+    cout << " GOAL REACHED !!!" << endl;
+    return;
+  }
+
+  int index = 0, i = 0,max = 0;
+  string rewards = "";
+  for (auto&val : q_table[s]){
+    accumulate_rewards(rewards, moves[i], val);
+    if(val > max)
+    {
+      max = val;
+      index = i;
+    }
+    i++;
+  }
+
+  s.print_map(); 
+  cout << rewards ;
+  cin.ignore();
+  solve_game(apply_move(s, index));
+}
+
