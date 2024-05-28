@@ -17,6 +17,18 @@ Welcome to the AI-GameOptimization repository! This project explores the use of 
 This repository contains code to solve the Sokoban game using the Q-learning algorithm. Sokoban is a classic puzzle game where the player pushes boxes to designated storage locations. The goal is to develop AI agents that can efficiently solve these puzzles using reinforcement learning and other optimization techniques.
 
 ## 🫐 Showcase
+# Training 
+![train3](https://github.com/Mhijazi16/AI-GameOptimization/assets/45119497/16a7d4ef-e2b5-40d6-9084-42cedc343de0)
+
+![train2](https://github.com/Mhijazi16/AI-GameOptimization/assets/45119497/c0c8358c-9568-410a-8d47-764530a004ef)
+
+# Solving
+
+![level1](https://github.com/Mhijazi16/AI-GameOptimization/assets/45119497/05c22987-6a1e-4906-90dc-6e26d98c383f)
+
+![level2](https://github.com/Mhijazi16/AI-GameOptimization/assets/45119497/f7cdd527-8f3c-4fcb-a5c6-7cf49ad687ff)
+
+![level3](https://github.com/Mhijazi16/AI-GameOptimization/assets/45119497/b5a76d57-2a45-4ddf-af95-f262b0083c55)
 
 
 ## ✨ Features
