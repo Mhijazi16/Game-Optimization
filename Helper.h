@@ -20,3 +20,16 @@ bool notAllowed(State state, Point& Target, Point& Future){
          state.isBox(Target) && state.isWallorBox(Future);
 }
 
+bool isDeadlock(State state){
+
+  set<Point> seen;
+  for (auto& box : state.Boxes)
+  {
+    if (seen.find(box) != seen.end())   
+      return true; 
+    seen.insert(box);
+  }
+
+return false;
+}
+
