@@ -41,3 +41,12 @@ void player_mode(){
   init();
   play(GAME);
 }
+
+void computer_mode(){
+    cout << "\n🤖 Computer Mode selected. Watch the AI in action!\n";
+    init();
+    Train();
+    printQ();
+    solve_game(GAME);
+}
+
