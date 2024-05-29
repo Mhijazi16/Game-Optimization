@@ -4,8 +4,7 @@
 
 void play(State state){
 
-  char input;
-  while ( input != 'q' && !isGoal(state) && !isDeadlock(state)) {
+  char input; while ( input != 'q' && !isGoal(state) && !isDeadlock(state)) {
     state.print_map();
 
     switch (input) {
@@ -26,4 +25,19 @@ void play(State state){
     input = cin.get();
   }
 
+}
+
+void player_mode(){
+  cout << "\n👤 Player Mode selected. Enjoy the game!\n";
+  cout << "\n🎮 Controls:\n";
+  cout << "+-----+-------+\n";
+  cout << "| Key | Emoji |\n";
+  cout << "+-----+-------+\n";
+  cout << "|  w  |   ⬆️   |\n";
+  cout << "|  a  |   ⬅️   |\n";
+  cout << "|  s  |   ⬇️   |\n";
+  cout << "|  d  |   ➡️   |\n";
+  cout << "+-----+-------+\n";
+  init();
+  play(GAME);
 }
