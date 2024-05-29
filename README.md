@@ -17,13 +17,16 @@
 Welcome to the AI-GameOptimization repository! This project explores the use of optimization algorithms to solve complex games. Currently, it focuses on solving the Sokoban game using Q-learning, with plans to extend to genetic algorithms and other optimization techniques in the future.
 
 ## 🫐 Showcase
+### Player Mode 
+
+![player](https://github.com/Mhijazi16/AI-GameOptimization/assets/45119497/e6f0fe2b-c7b4-45e5-9a8e-17940b9e5e87)
+
+ 
 ### Training 
 ![train3](https://github.com/Mhijazi16/AI-GameOptimization/assets/45119497/16a7d4ef-e2b5-40d6-9084-42cedc343de0)
 
 
 ### Solving
-
-![level1](https://github.com/Mhijazi16/AI-GameOptimization/assets/45119497/05c22987-6a1e-4906-90dc-6e26d98c383f)
 
 ![level2](https://github.com/Mhijazi16/AI-GameOptimization/assets/45119497/f7cdd527-8f3c-4fcb-a5c6-7cf49ad687ff)
 
